@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Interaction Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="authentication">
+        <input type="text" id="api_key" placeholder="API Key">
+        <input type="number" id="model_id" placeholder="Model ID">
+        <button id="authenticate">Authenticate</button>
+    </div>
+    <div id="hallucination-form" style="display: none;">
+        <input type="text" id="prompt" placeholder="Prompt">
+        <input type="text" id="response" placeholder="Response">
+        <button id="submit_hallucination">Submit Hallucination</button>
+    </div>
+    <div id="hallucination-display" style="display: none;">
+        <button id="display_hallucination">Display Hallucination</button>
+        <!-- Place to display the hallucination data -->
+        <div id="hallucination_data"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,10 +1,18 @@
-# Node.js template
+## Task
+1. User submit API_KEY(String) and model_id(INT) to authenticate the server.
 
-This is a Node.js project.
+- a. If API key is invalid, return HTTP authentication failure error
+- b. If successful, Returns the org_id(INT), from server  and JWT token.(need display on demo)
 
-Add your [configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) to optimize it for [CodeSandbox](https://codesandbox.io/p/dashboard).
+2. User input PROMPT(String) and RESPONSE(String) and submit to the server via HTTPS by Clicking "Submit Hallucination" button.
 
-## Resources
+- a. Calls "POST Hallucination" restfulAPI.
+Server will get encryrption_key(INT) based on the org_id and encrypt the PROMPT and RESPONSE.
+- b. Server will "Insert Hallucination" backend API to insert all the data into the Hallucination table.
 
-- [CodeSandbox — Docs](https://codesandbox.io/docs/learn)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
+3. User can display the inserted Hallucination data by click “display Hallucination”.
+- a. Call “GET Hallucination" restfulAPI.
+Server will get decryrption_key(INT) based on the org_id and decrypt the PROMPT and RESPONSE.
+- b. Server will return the Hallucination table to the client
+
+NOTE: encryrption_key(INT)/decryrption_key(INT) are public/private key pair that is generated separately in advance and stored in the DB via org_id.

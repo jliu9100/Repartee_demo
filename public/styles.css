@@ -1,0 +1,17 @@
+body {
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+input,
+button {
+  margin: 5px 0;
+  padding: 10px;
+}
+
+#hallucination_data {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
